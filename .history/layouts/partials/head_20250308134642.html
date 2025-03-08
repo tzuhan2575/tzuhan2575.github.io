@@ -1,0 +1,4 @@
+{{ partial "head.html" . }} <!-- This ensures the default PaperMod head content is loaded -->
+
+{{ $customCSS := resources.Get "css/custom.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}">

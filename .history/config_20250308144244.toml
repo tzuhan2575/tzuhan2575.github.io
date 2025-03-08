@@ -1,0 +1,15 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'TzuHan Blog'
+theme = 'PaperMod'
+[params]
+  ShowFullTextinHome = false # Ensure this is false
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
+  [params.homeInfoParams]
+    Title = "Welcome to My Blog "
+    Content = "Sharing insights about AI, machine learning, and more!"
