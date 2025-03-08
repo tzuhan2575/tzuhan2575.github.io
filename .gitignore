@@ -1,0 +1,4 @@
+# Hugo 相關
+public/
+resources/
+.hugo_build.lock
