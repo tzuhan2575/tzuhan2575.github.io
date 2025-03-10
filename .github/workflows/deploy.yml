@@ -1,0 +1,31 @@
+name: Deploy Hugo site
+
+on:
+  push:
+    branches:
+      - main  # 只有 main 分支有變更時才會觸發部署
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # 確保可以下載 theme
+          fetch-depth: 0    # 下載完整的 git history
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build Hugo site
+        run: hugo --minify  # 生成靜態網站
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Hugo 產生的靜態網站在 public/
+          publish_branch: gh-pages  # 推送到 gh-pages 分支
