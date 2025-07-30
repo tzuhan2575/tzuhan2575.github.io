@@ -12,7 +12,8 @@ theme = 'PaperMod'
   ShowToc = false
   TocOpen = false
   [params.homeInfoParams]
-    enable = false
+    Title = "嗨，我是 TzuHan 👋"
+    Content = "一個熱愛TWICE、寫作與學習新知的資工研究生。這裡是我的數位筆記分享區，歡迎隨意逛逛！"
   
 [menu]
   [[menu.main]]

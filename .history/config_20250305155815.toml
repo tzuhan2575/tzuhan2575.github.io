@@ -1,7 +1,0 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'TzuHan Blog'
-theme = 'PaperMod'
-[params]
-  ShowToc = true            # 啟用文章內 TOC（文章開頭會出現目錄）
-  TocOpen = true            # 讓 TOC 預設展開
